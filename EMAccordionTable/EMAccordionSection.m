@@ -15,5 +15,7 @@
 @synthesize title = _title;
 @synthesize titleColor = _titleColor;
 @synthesize titleFont = _titleFont;
+@synthesize isNew = _isNew;
+@synthesize hasDiscount = _hasDiscount;
 
 @end

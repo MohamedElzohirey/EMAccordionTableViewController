@@ -15,5 +15,7 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) UIColor *titleColor;
 @property (nonatomic, strong) UIFont *titleFont;
+@property (nonatomic, strong) NSNumber*isNew;
+@property (nonatomic, strong) NSNumber*hasDiscount;
 
 @end
