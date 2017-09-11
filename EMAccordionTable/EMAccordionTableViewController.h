@@ -37,6 +37,7 @@ typedef NS_ENUM(NSUInteger, EMAnimationType) {
 @property (nonatomic) NSInteger defaultOpenedSection;
 @property (nonatomic, strong) NSNumber*isArabic;
 @property (nonatomic, strong) NSNumber*scrolltoTopWhenOpenSection;
+@property (nonatomic, strong) NSNumber*animationDuration;
 
 - (id) initWithTable:(UITableView *)tableView withAnimationType:(EMAnimationType) type;
 

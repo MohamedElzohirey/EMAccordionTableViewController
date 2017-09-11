@@ -257,7 +257,10 @@
     rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, DEGREES_TO_RADIANS(90), 1.0f, 0.0f, 0.0f);
     card.layer.transform = rotationAndPerspectiveTransform;
     rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, DEGREES_TO_RADIANS(-90), 1.0f, 0.0f, 0.0f);
-    [UIView animateWithDuration:.4 animations:^{
+    NSTimeInterval duration=.4;
+    if(self.animationDuration)
+        duration=self.animationDuration.doubleValue;
+    [UIView animateWithDuration:duration animations:^{
         card.alpha = 1.0f;
         card.layer.transform = rotationAndPerspectiveTransform;
     } completion:^(BOOL finished){
