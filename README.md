@@ -45,16 +45,22 @@ Alternatively you can just copy all the files included in the folder [EMAccordio
 
 @property (nonatomic, strong) UIImage * closedSectionIcon;
 @property (nonatomic, strong) UIImage * openedSectionIcon;
+@property (nonatomic, strong) UIImage * discountSectionIcon;
+@property (nonatomic, strong) UIImage * newdSectionIcon;
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) EMAccordionTableParallaxHeaderView *parallaxHeaderView;
 @property (nonatomic, strong) NSMutableArray *sectionsHeaders;
 @property (nonatomic) NSInteger defaultOpenedSection;
+@property (nonatomic, strong) NSNumber*isArabic;
+@property (nonatomic, strong) NSNumber*scrolltoTopWhenOpenSection;
+@property (nonatomic, strong) NSNumber*animationDuration;
 
 - (id) initWithTable:(UITableView *)tableView withAnimationType:(EMAnimationType) type;
 
 - (void) addAccordionSection: (EMAccordionSection *) section initiallyOpened:(BOOL)opened;
 - (void) setDelegate: (NSObject <EMAccordionTableDelegate> *) delegate;
-
+-(void)removeAllSections;
 @end
 ```
 
@@ -78,12 +84,14 @@ Alternatively you can just copy all the files included in the folder [EMAccordio
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) UIColor *titleColor;
 @property (nonatomic, strong) UIFont *titleFont;
+@property (nonatomic, strong) NSNumber*isNew;
+@property (nonatomic, strong) NSNumber*hasDiscount;
 
 @end
 ```
 
 ## TODO
-- Give the possibility to open a section clicking on the section itself instead of the icon
+- Give the possibility to open a section clicking on the section itself instead of the icon (Done)
 - Give the possibility to open a section programmatically
 
 ## Help me improving this!

@@ -28,14 +28,20 @@ typedef NS_ENUM(NSUInteger, EMAnimationType) {
 
 @property (nonatomic, strong) UIImage * closedSectionIcon;
 @property (nonatomic, strong) UIImage * openedSectionIcon;
+@property (nonatomic, strong) UIImage * discountSectionIcon;
+@property (nonatomic, strong) UIImage * newdSectionIcon;
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) EMAccordionTableParallaxHeaderView *parallaxHeaderView;
 @property (nonatomic, strong) NSMutableArray *sectionsHeaders;
 @property (nonatomic) NSInteger defaultOpenedSection;
+@property (nonatomic, strong) NSNumber*isArabic;
+@property (nonatomic, strong) NSNumber*scrolltoTopWhenOpenSection;
+@property (nonatomic, strong) NSNumber*animationDuration;
 
 - (id) initWithTable:(UITableView *)tableView withAnimationType:(EMAnimationType) type;
 
 - (void) addAccordionSection: (EMAccordionSection *) section initiallyOpened:(BOOL)opened;
 - (void) setDelegate: (NSObject <EMAccordionTableDelegate> *) delegate;
-
+-(void)removeAllSections;
 @end
