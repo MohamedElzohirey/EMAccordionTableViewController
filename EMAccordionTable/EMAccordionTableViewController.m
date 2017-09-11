@@ -232,7 +232,8 @@
     
     if (!value){
         [self showCellsWithAnimation];
-        [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] animated:YES scrollPosition:UITableViewScrollPositionTop];
+        if(self.scrolltoTopWhenOpenSection.boolValue)
+            [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] animated:YES scrollPosition:UITableViewScrollPositionTop];
     }
     
     [emDelegate latestSectionOpened];
