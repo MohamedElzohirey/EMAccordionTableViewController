@@ -199,9 +199,18 @@
         [accessoryIV setImage:self.closedSectionIcon];
     
     [sectionView addSubview:accessoryIV];
-    
+    if(emAccordionSection.hasDiscount.boolValue){
+        [additionalImage_new_offer setImage:self.discountSectionIcon];
+        [additionalImage_new_offer setBackgroundColor:[UIColor clearColor]];
+        [sectionView addSubview:additionalImage_new_offer];
+    }
+    if(emAccordionSection.isNew.boolValue){
+        [additionalImage_new_offer setImage:self.newdSectionIcon];
+        [additionalImage_new_offer setBackgroundColor:[UIColor clearColor]];
+        [sectionView addSubview:additionalImage_new_offer];
+    }
     [self.sectionsHeaders insertObject:sectionView atIndex:section];
-
+    
     if ([emDelegate respondsToSelector:@selector(tableView:viewForHeaderInSection:)])
         return [emDelegate tableView:tableView viewForHeaderInSection:section];
     
@@ -271,3 +280,4 @@
 }
 
 @end
+
