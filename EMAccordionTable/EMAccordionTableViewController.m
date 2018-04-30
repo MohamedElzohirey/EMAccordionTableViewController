@@ -213,7 +213,11 @@
     
     if ([emDelegate respondsToSelector:@selector(tableView:viewForHeaderInSection:)])
         return [emDelegate tableView:tableView viewForHeaderInSection:section];
-    
+    if(emAccordionSection.hasSeperator.boolValue){
+        UIView*line=[[UIView alloc]initWithFrame:CGRectMake(emAccordionSection.seperatorMargin.doubleValue, sectionView.frame.size.height-2, sectionView.frame.size.width-(2*emAccordionSection.seperatorMargin.doubleValue), emAccordionSection.seperatorHeight.doubleValue)];
+        line.backgroundColor=emAccordionSection.seperatorColor;
+        [sectionView addSubview:line];
+    }
     return sectionView;
 }
 

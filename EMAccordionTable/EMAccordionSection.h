@@ -17,5 +17,9 @@
 @property (nonatomic, strong) UIFont *titleFont;
 @property (nonatomic, strong) NSNumber*isNew;
 @property (nonatomic, strong) NSNumber*hasDiscount;
+@property (nonatomic, strong) UIColor*seperatorColor;
+@property (nonatomic, strong) NSNumber*seperatorMargin;
+@property (nonatomic, strong) NSNumber*seperatorHeight;
+@property (nonatomic, strong) NSNumber*hasSeperator;
 
 @end

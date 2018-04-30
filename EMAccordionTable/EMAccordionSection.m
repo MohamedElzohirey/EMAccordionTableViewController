@@ -17,5 +17,8 @@
 @synthesize titleFont = _titleFont;
 @synthesize isNew = _isNew;
 @synthesize hasDiscount = _hasDiscount;
-
+@synthesize seperatorColor = _seperatorColor;
+@synthesize seperatorMargin = _seperatorMargin;
+@synthesize hasSeperator = _hasSeperator;
+@synthesize seperatorHeight = _seperatorHeight;
 @end
